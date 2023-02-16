@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./rabbitmq:/var/lib/rabbitmq
+    expose:
+      - 5672
+      - 15672
+      
+  blockchain-scanner:
+    build: .
+    image: blockchain-scanner
+    command: yarn start
+    environment:
+      - MQ_URL=amqp://host.docker.internal
+      - DATABASE_URL=postgres://postgres:postgres@host.docker.internal:5432/indexer
+      - LOG_LEVEL=info
+      - NODE_ENV=production
+    volumes:
+      - .:/usr/src/indexer
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: on-failure

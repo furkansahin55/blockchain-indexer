@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# yarn error logs
+yarn-error.log
+
+# Environment varibales
+.env*
+
+# Logs
+logs
+
+# rabbit mq
+rabbitmq
+
+# last_synced_block txt
+last_synced_block.txt

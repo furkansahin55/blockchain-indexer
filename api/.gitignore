@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# yarn error logs
+yarn-error.log
+
+# Environment varibales
+.env*
+
+# Logs
+logs
+
+# last_synced_block txt
+last_synced_block.txt
