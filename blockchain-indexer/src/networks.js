@@ -6,19 +6,11 @@ const production = [
     name: "ethereum_mainnet",
     providerURL: "http://host.docker.internal:8545",
   },
-  {
-    name: "ethereum_testnet",
-    providerURL: "http://host.docker.internal:8545",
-  },
 ];
 
 const development = [
   {
     name: "ethereum_mainnet",
-    providerURL: "http://localhost:8545",
-  },
-  {
-    name: "ethereum_testnet",
     providerURL: "http://localhost:8545",
   },
 ];
