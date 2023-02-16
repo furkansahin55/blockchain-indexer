@@ -1,5 +1,5 @@
-# Blockchain Scanner
-Blockchain Scanner scans all blocks on an EVM-compatible chain and saves transactions to a defined PostgreSQL database.
+# API
+API for serving data.
 
 ## Setup
 - `cd api`
