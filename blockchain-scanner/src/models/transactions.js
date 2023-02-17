@@ -1,7 +1,5 @@
 const { DataTypes } = require("sequelize");
 
-
-// TODO index to from
 module.exports = (sequelize) => {
   return sequelize.define(
     "transactions",
@@ -22,28 +20,28 @@ module.exports = (sequelize) => {
         primaryKey: true,
       },
       from: {
-        type: DataTypes.STRING(42)
+        type: DataTypes.STRING(42),
       },
       to: {
-        type: DataTypes.STRING(42)
+        type: DataTypes.STRING(42),
       },
       gasUsed: {
-        type: DataTypes.DECIMAL(78,0)
+        type: DataTypes.DECIMAL(78, 0),
       },
       cumulativeGasUsed: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
       },
       logs: {
-        type: DataTypes.JSON
+        type: DataTypes.JSON,
       },
       blockHash: {
-        type: DataTypes.STRING(66)
+        type: DataTypes.STRING(66),
       },
       status: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
       },
       effectiveGasPrice: {
-        type: DataTypes.DECIMAL(78,0)
+        type: DataTypes.DECIMAL(78, 0),
       },
       blockTimestamp: {
         type: DataTypes.DATE,

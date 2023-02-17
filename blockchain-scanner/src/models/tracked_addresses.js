@@ -8,7 +8,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING(42),
         primaryKey: true,
         allowNull: false,
-      }
+      },
     },
     {
       freezeTableName: true,

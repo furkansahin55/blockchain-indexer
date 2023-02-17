@@ -20,7 +20,7 @@ RabbitMQ
 ## Flow of indexing data
 1. Blockchain Scanner listens for new blocks
 2. When a new block arrives it sends a save block task to MQ
-3. Task fetches by Blockchain Indexer worker 
+3. A Blockchain Indexer worker fetches task
 4. Worker saves all transactions for the network and block number sent in the task object
 5. Worker creates index block task and sends to MQ after saving finished
 6. A worker fetches the index block task and checks if transactions in the task object are related to any of the addresses that are being tracked
