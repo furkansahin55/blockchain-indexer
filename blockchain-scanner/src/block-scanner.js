@@ -117,7 +117,7 @@ class BlockScanner {
     this.logger.info("block scanner started");
 
     // catch up from last synced block to current block
-    await this.catchUpLastBlock();
+    this.catchUpLastBlock();
 
     this.logger.info(`listening for new blocks`);
 
